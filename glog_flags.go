@@ -382,6 +382,10 @@ func backtraceAt(file string, line int) bool {
 	return logBacktraceAt.match(file, line)
 }
 
+func SetLogToStderr(value bool) {
+	alsoToStderr = value
+}
+
 func init() {
 	vflags.moduleLevelCache.Store(&sync.Map{})
 
